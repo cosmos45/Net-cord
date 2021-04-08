@@ -1,0 +1,8 @@
+.app {
+  display: flex;
+  background-color: #111;
+}
+
+* {
+  margin: 0;
+}
