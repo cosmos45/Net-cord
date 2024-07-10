@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "flixcord",
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -13,5 +12,8 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "database": {
+    "rules": "database.rules.json"
   }
 }

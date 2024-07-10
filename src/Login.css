@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 .login {
   display: grid;
   place-items: center;
@@ -15,4 +17,12 @@
 
 .login > button:hover {
   background-color: #475999;
+}
+
+.flixcord {
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
 }
