@@ -12,17 +12,11 @@ function Login() {
     <div className="login">
       <div className="login__logo">
         <img
-          src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png"
+          src="https://api.deepai.org/job-view-file/b9779edb-0ad1-4958-9bd7-1bdb4190f429/outputs/output.png"
           alt=""
+          width={500}
+          height={500}
         />
-
-        <center>
-          <br />
-          <br />
-          <h3>
-            Hi, Buntyyy 
-          </h3>
-        </center>
       </div>
       <Button onClick={signIn}>Sign In</Button>
     </div>

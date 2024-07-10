@@ -1,19 +1,16 @@
-import firebase from 'firebase';
-
+import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBzZ2JXAL-F0BDN3uafPkKV5s-c9JxA5uM",
-  authDomain: "discord-clone-7411f.firebaseapp.com",
-  databaseURL: "https://discord-clone-7411f.firebaseio.com",
-  projectId: "discord-clone-7411f",
-  storageBucket: "discord-clone-7411f.appspot.com",
-  messagingSenderId: "485472660269",
-  appId: "1:485472660269:web:700b2af2dc284f34b681a4",
-  measurementId: "G-9BP6SJB558",
+  apiKey: "AIzaSyDVFrSPGXukt7roMzWZ3ZdkLz_lzNJIl6I",
+  authDomain: "flixdisc-64c43.firebaseapp.com",
+  projectId: "flixdisc-64c43",
+  storageBucket: "flixdisc-64c43.appspot.com",
+  messagingSenderId: "696041000000",
+  appId: "1:696041000000:web:18ac5d59588a05b558a3a5",
+  measurementId: "G-SH803NM35S",
 };
 
-
-const firebaseApp =firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const db = firebaseApp.firestore();
 const auth = firebase.auth();

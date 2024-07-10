@@ -46,6 +46,7 @@ function Chat() {
       <div className="chat__messages">
         {messages.map((message) => (
           <Message
+            key={message.timestamp}
             timestamp={message.timestamp}
             message={message.message}
             user={message.user}
@@ -53,10 +54,8 @@ function Chat() {
         ))}
       </div>
       <div className="chat__input">
-        
         <form>
           <input
-          
             value={input}
             disabled={!channelId}
             onChange={(e) => setInput(e.target.value)}
@@ -67,12 +66,8 @@ function Chat() {
             className="chat__inputButton"
             type="submit"
             onClick={sendMessage}
-            
-          >
-            
-          </button>
+          ></button>
         </form>
-       
       </div>
     </div>
   );

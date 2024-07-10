@@ -15,14 +15,11 @@ function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
 
-  
-
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       console.log("user is:", authUser);
 
       if (authUser) {
-        
         dispatch(
           login({
             uid: authUser.uid,
@@ -33,7 +30,6 @@ function App() {
         );
       } else {
         dispatch(logout());
-        
       }
     });
   }, [dispatch]);
@@ -44,29 +40,28 @@ function App() {
         <>
           <Sidebar />
           <Chat />
-          <Row />
+          <div>
+            <Banner />
+            <Row
+              title="NETFLIX ORIGINALS"
+              fetchUrl={requests.fetchNetflixOriginals}
+              isLargeRow
+            />
+            <Row title="TOP RATED" fetchUrl={requests.fetchTopRated} />
+            <Row title="Trending" fetchUrl={requests.fetchTrending} />
+            <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+            <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+            <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+            <Row
+              title="Romance Movies"
+              fetchUrl={requests.fetchRomanceMovies}
+            />
+          </div>
         </>
       ) : (
         <Login />
       )}
-
-      <div>
-      
-
-      <Banner />
-      <Row title="NETFLIX ORIGINALS" fetchUrl={ requests.fetchNetflixOriginals} isLargeRow/>
-      <Row title="TOP RATED" fetchUrl = {requests.fetchTopRated}/>
-      <Row title="Trending" fetchUrl={ requests.fetchTrending} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies}/>
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies}/>
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}/>
-      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies}/>
-      </div>
-
     </div>
-      
-
-    
   );
 }
 
