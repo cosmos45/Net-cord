@@ -2,7 +2,6 @@
   overflow-y: scroll;
   overflow: hidden;
   position: relative;
-  margin-left: 32.2rem;
   display: flex;
   flex-direction: column;
   flex: 50em;

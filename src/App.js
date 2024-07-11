@@ -38,10 +38,17 @@ function App() {
     <div className="app">
       {user ? (
         <>
-          <Sidebar />
-          <Chat />
-          <div>
-            <Banner />
+
+          <div className="column column-fixed">
+            <Sidebar />
+          </div>
+          <div className="column column-fixed">
+            <Chat />
+          </div>
+          <div  className="column column-scrollable">
+            <div className="banner_width">
+              <Banner />
+            </div>
             <Row
               title="NETFLIX ORIGINALS"
               fetchUrl={requests.fetchNetflixOriginals}

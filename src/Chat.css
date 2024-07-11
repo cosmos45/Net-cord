@@ -1,11 +1,8 @@
 .chat {
   display: flex;
   flex-direction: column;
-  flex: 10em;
   height: 100vh;
-  position: fixed;
-  margin-left: 13.5em;
-
+  width: 40vh;
   background-color: #363a3f;
 }
 

@@ -25,14 +25,15 @@ function Banner() {
         return str?.length > n ? str.substr(0, n-1)+"...":str;
     }
     return (
-        <header 
+        <div 
         className="banner"
         style={{
-            backgroudSize: "cover",
-            backgroundPosition: "center center",
-            // eslint-disable-next-line no-template-curly-in-string
-            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`
-            
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+            height: 'auto',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize:'cover'
+          
         }}
         >
     
@@ -53,7 +54,7 @@ function Banner() {
             
         </div>
         <div className="fade"></div>
-        </header>
+        </div>
         
     )
 }
